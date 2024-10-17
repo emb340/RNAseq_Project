@@ -1,1 +1,1 @@
-#This is a documented workflow for the RNAseq project in BIOL 3615
+This is a documented workflow for the RNAseq project in BIOL 3615.
