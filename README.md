@@ -1,1 +1,1 @@
-This project (for BIOL 3615) investigates gene expression across variable populations of Candida albicans. The workflow for this analysis can be found in the [Master Notes] (https://github.com/emb340/RNAseq_Project/blob/main/MasterNotes.md). 
+This project (for BIOL 3615) investigates gene expression across variable populations of Candida albicans. The workflow for this analysis can be found in the [Master Notes](https://github.com/emb340/RNAseq_Project/blob/main/MasterNotes.md). 
