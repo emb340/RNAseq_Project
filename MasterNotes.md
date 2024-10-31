@@ -1,6 +1,9 @@
 # Workflow details for the _Candida albicans_ RNAseq analysis 
 The general outline for this project is Sequence Quality Control --> Mapping to a Reference --> Couting the Reads per Gene Model --> Differential Expression Analysis --> Gene Ontology Enrichment Analysis
 
+## Overview of Experimental Treatment
+SEE SLIDES FROM FIRST CLASS***
+
 ## Data Accession
 DNA sequence data was obtained from the Rolfes Lab at the Georgetown University Department of Biology.
 Raw reads are not accessible to the public at the moment, as they have yet to be published.
