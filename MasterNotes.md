@@ -8,6 +8,8 @@ _Candida albicans_ is a human commensal fungi and opportunistic pathogen that ca
 RNA sequence data was obtained from the Rolfes Lab at the Georgetown University Department of Biology.
 Raw reads are not accessible to the public at the moment, as they have yet to be published.
 
+TALK ABOUT REFERENCE GENOME!!!
+
 ## Preprocessing and Quality Control
 FASTQC quality analysis was performed on the raw forward and reverse reads for biological isolate A [(script)](https://github.com/emb340/RNAseq_Project/blob/main/fastqc1.SBATCH)
 
