@@ -20,3 +20,15 @@ The second iteration of FASTQ analysis illustrated that positive changes in qual
 
 ## Mapping Reads to a Reference
 
+Mapping was done using the _Candida albicans_ reference genome [(GCF_000182965.3)](https://github.com/emb340/RNAseq_Project/blob/main/GCF_000182965.3_ASM18296v3_genomic.fna) found on the NCBI genome database. This haploid assembly was selected to streamline the alignment process and take advantage of NCBI's curated [annotation file](https://github.com/emb340/RNAseq_Project/blob/main/GCF_000182965.3_ASM18296v3_genomic.gtf).
+
+The genome was indexed with bowtie2/2.5.3, creating several new index files with the base name alignment_index, based on the NCBI reference genome and using the following command: 
+
+bowtie2-build /home/emb340/RNAseq/step_three_referenceSeq/GCF_000182965.3_ASM18296v3_genomic.fna alignment_index
+
+After the creation of these indices, bowtie2 was employed to align the trimmed, paired-end sequence reads against them [(script)](https://github.com/emb340/RNAseq_Project/blob/main/calbicans_bowtie2_alignment.SBATCH).
+
+This read alignment is depicted in the WTA1.sam file, and summarized in the [z01 file](https://github.com/emb340/RNAseq_Project/blob/main/z01.bowtie2) derived from the above bowtie2 script.
+
+## 
+
