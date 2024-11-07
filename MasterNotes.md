@@ -2,7 +2,7 @@
 The general outline for this project is Sequence Quality Control --> Mapping to a Reference --> Couting the Reads per Gene Model --> Differential Expression Analysis --> Gene Ontology Enrichment Analysis
 
 ## Overview of Experimental Treatment
-_Candida albicans_ is a human commensal fungus and opportunistic pathogen that can cause several diseases, including urinary tract and blood infections. To evaluate its role in _C. albicans_ proliferation, cultures of this species were grown in the presence or absence of thiamine (Vitamin B1) and then their mRNA transcripts were collected and sequenced for evaluation. 
+_Candida albicans_ is a human commensal fungus and opportunistic pathogen that can cause several diseases, including urinary tract and blood infections. To evaluate its role in _C. albicans_ proliferation, cultures of this species were grown in the presence or absence of thiamine (Vitamin B1) and then their mRNA transcripts were collected and sequenced for evaluation. This analysis will specifically investigate the population of biological isolate A that was grown in the presence of thiamine (Thi+). 
 
 ## Data Accession
 RNA sequence data was obtained from the Rolfes Lab at the Georgetown University Department of Biology.
