@@ -34,4 +34,4 @@ To best facilitate the next step of the workflow, the samtools package was utili
 
 
 ## Counting Reads per Gene Model with HTseq
-
+Within the context of a Conda environment--utilized to ensure compatibility while integrating multiple pieces of software--HTSeq was implemented to count reads per gene for the reference-mapped reads obtained previously [(script)](
