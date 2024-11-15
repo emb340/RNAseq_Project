@@ -2,7 +2,11 @@
 The general outline for this project is Sequence Quality Control --> Mapping to a Reference --> Couting the Reads per Gene Model --> Differential Expression Analysis --> Gene Ontology Enrichment Analysis
 
 ## Overview of Experimental Treatment
-_Candida albicans_ is a human commensal fungus and opportunistic pathogen that can cause several diseases, including urinary tract and blood infections. To evaluate its role in _C. albicans_ proliferation, cultures of this species were grown in the presence or absence of thiamine (Vitamin B1) and then their mRNA transcripts were collected and sequenced for evaluation. This analysis will specifically investigate the population of biological isolate A that was grown in the presence of thiamine (A, Thi+). 
+_Candida albicans_ is a human commensal fungus and opportunistic pathogen that can cause several diseases, including urinary tract and blood infections. To evaluate its role in _C. albicans_ proliferation, cultures of this species were grown in the presence or absence of thiamine (Vitamin B1) and then their mRNA transcripts were collected and sequenced for evaluation. This experimental procedure gave rise to a collection of 12 data files: forward and reverse reads (_1 and _2) for three biological replicates (WTA, WTB, and WTC) grown in the presence or absence of thiamine (WTX1 or WTX2). 
+
+<img width="402" alt="Screenshot 2024-11-15 at 11 38 36 AM" src="https://github.com/user-attachments/assets/34f09c4f-acdf-4366-9d5b-de94492e1b1c">
+
+This analysis will specifically investigate the population of biological isolate A that was grown in the presence of thiamine (WTA1). 
 
 ## Data Accession
 RNA sequence data was obtained from the Rolfes Lab at the Georgetown University Department of Biology.
@@ -10,7 +14,7 @@ Raw reads are not accessible to the public at the moment, as they have yet to be
 
 
 ## Preprocessing and Quality Control
-FASTQC quality analysis was performed on the raw forward and reverse reads for biological isolate A [(script)](https://github.com/emb340/RNAseq_Project/blob/main/fastqc1.SBATCH)
+FASTQC quality analysis was performed on the raw forward and reverse reads for biological isolate A [(script)](https://github.com/emb340/RNAseq_Project/blob/main/fastqc1.SBATCH).
 
 The initial FASTQC processing indicated that both the [forward](https://github.com/emb340/RNAseq_Project/blob/main/WTA1_1_preclean_fastqc.html) and [reverse](https://github.com/emb340/RNAseq_Project/blob/main/WTA1_2_preclean_fastqc.html) sequence reads had significant quality issues, chiefly problematic per base sequence content near the beginning of the reads and duplication levels.
 
@@ -34,4 +38,6 @@ To best facilitate the next step of the workflow, the samtools package was utili
 
 
 ## Counting Reads per Gene Model with HTseq
-Within the context of a Conda environment--utilized to ensure compatibility while integrating multiple pieces of software--HTSeq was implemented to count reads per gene for the reference-mapped reads obtained previously [(script)](
+Within the context of a Conda environment--utilized to ensure compatibility while integrating multiple pieces of software--HTSeq was implemented to count reads per gene for the reference-mapped reads obtained previously [(script)](https://github.com/emb340/RNAseq_Project/blob/main/htseq.SBATCH).
+
+The results of this anaylsis 
