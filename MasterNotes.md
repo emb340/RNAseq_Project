@@ -10,7 +10,7 @@ This analysis will specifically investigate the population of biological isolate
 
 ## Data Accession
 RNA sequence data was obtained from the Rolfes Lab at the Georgetown University Department of Biology.
-Raw reads are not accessible to the public at the moment, as they have yet to be published.
+Raw reads are not accessible to the public currently, as they have yet to be published.
 
 
 ## Preprocessing and Quality Control
@@ -38,6 +38,7 @@ To best facilitate the next step of the workflow, the samtools package was utili
 
 
 ## Counting Reads per Gene Model with HTseq
-Within the context of a Conda environment--utilized to ensure compatibility while integrating multiple pieces of software--HTSeq was implemented to count reads per gene for the reference-mapped reads obtained previously [(script)](https://github.com/emb340/RNAseq_Project/blob/main/htseq.SBATCH).
+Within the context of a Conda environment--utilized to ensure compatibility while integrating multiple pieces of software--HTSeq was implemented to count reads per gene for the reference-mapped reads obtained previously [(script)](https://github.com/emb340/RNAseq_Project/blob/main/htseq.SBATCH). 
 
-The results of this anaylsis 
+This analysis incorporated the sorted WTA1.bam file containing the read alignment data and the .gtf annotation file referenced previously to produce a listing of the number of observed read counts per annotated _C. albicans_gene, which can be found in the [WTA1_htseqCount](https://github.com/emb340/RNAseq_Project/blob/main/WTA1_htseqCount) file.
+
