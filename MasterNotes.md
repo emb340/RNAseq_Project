@@ -69,8 +69,9 @@ As can be seen in the PCA plot, the two experimental conditions (THI+/THI-) do n
 
 ## Gene Ontology (GO) Analysis
 To identify GO terms that were meaningfully enriched for the previously identified DEGs, the NCBI GeneIDs of the 13 DEGs were input into the PANTHER knowledgebase, and a statistical enrichment test was conducted. Some of the most significantly enriched GO tags and their associated statistical values are given in the table below.
+<img width="833" alt="image" src="https://github.com/user-attachments/assets/b81ebe22-1be4-45ec-8755-382fcc15a9e1">
 
 
 
-From the above table, it is evident that the genes upregulated in _Candida albicans_ grown in the absence of thiamine are involved in  de novo thiamine synthesis. This conclusion aligns with the results of the DESeq2 analysis, reaffirming this function for the majority of the 13 identified DEGs. Such a function for these genes makes biological sense, as when _C. albicans_ is cultivated in conditions where it is starved for thiamine, to enable survival and proliferation, the organism would strive to access thiamine through alternative means than simple uptake from the environment. 
+From the above table, it is evident that the genes upregulated in _Candida albicans_ grown in the absence of thiamine are involved in the  synthesis of thiamine and its derivatives. This conclusion aligns with the results of the DESeq2 analysis, reaffirming this function for the majority of the 13 identified DEGs. Such a function for these genes makes biological sense, as when _C. albicans_ is cultivated in conditions where it is starved for thiamine, to enable survival and proliferation, the organism would strive to generate its own thiamine rather than uptake it from the extracellular environment. 
 
