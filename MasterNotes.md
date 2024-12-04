@@ -55,7 +55,7 @@ This DESeq2 script was employed to manipulate and investigate the input data:
 
 As can be seen in the PCA plot, the two experimental conditions (THI+/THI-) do not meaningfully differ regarding PC1, which accounts for 88% of the variance in gene expression. However, these treatments differ about PC2, which accounts for only 9% of the variance in gene expression, indicating that we expect to see local rather than global differences in expression levels between the two.
 
-4) Following this, a differential gene analysis was run, and a volcano plot was generated to depict the significance, magnitude, and direction of the differences in gene expression levels between the two experimental conditions (lines 107-146). The volcano plot is given below. As illustrated by this figure, the most significantly expressed genes (seen in red) were enriched in THI- conditions relative to THI+ ones.
+4) Following this, a differential gene analysis was run, and a volcano plot was generated to depict the significance, magnitude, and direction of the differences in gene expression levels between the two experimental conditions (lines 107-146). The volcano plot is given below. As illustrated by this figure, the most significantly expressed genes (seen in red) were upregulated in THI- conditions relative to THI+ ones.
 <img width="924" alt="image" src="https://github.com/user-attachments/assets/f6111089-1893-4bce-a6f0-9aa02a169693">
 
 
@@ -73,5 +73,7 @@ To identify GO terms that were meaningfully enriched for the previously identifi
 
 
 
-From the above table, it is evident that the genes upregulated in _Candida albicans_ grown in the absence of thiamine are involved in the  synthesis of thiamine and its derivatives. This conclusion aligns with the results of the DESeq2 analysis, reaffirming this function for the majority of the 13 identified DEGs. Such a function for these genes makes biological sense, as when _C. albicans_ is cultivated in conditions where it is starved for thiamine, to enable survival and proliferation, the organism would strive to generate its own thiamine rather than uptake it from the extracellular environment. 
+From the above table, it is evident that the genes upregulated in _Candida albicans_ grown in the absence of thiamine are involved in the synthesis of thiamine and its derivatives. This conclusion aligns with the results of the DESeq2 analysis, reaffirming this function for the majority of the 13 identified DEGs. Such a function for these genes makes biological sense, as when _C. albicans_ is cultivated in conditions where it is starved for thiamine, to enable survival and proliferation, the organism would opt to produce its own thiamine rather than fail to obtain it from the extracellular environment. 
+
+However, it is important to note that a number of the DEGs possessed functions unrelated to the biosynthesis of thiamine. As inferred from the Candida genome databse and PANTHER evaluation, these include pyridoxine (a derivative of vitamin B6) synthesis and transport, strol synthesis, and chromosomal segregation in mitosis. Speculatively, the differenital expression of genes with these additional functions in _C. albicans_ cultured in a thiamine-absent environment suggests these processes may be involved in a broader stress response to conditions of nutrient limitation.
 
