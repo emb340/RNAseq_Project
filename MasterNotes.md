@@ -56,7 +56,8 @@ This DESeq2 script was employed to manipulate and investigate the input data:
 As can be seen in the PCA plot, the two experimental conditions (THI+/THI-) do not meaningfully differ regarding PC1, which accounts for 88% of the variance in gene expression. However, these treatments differ about PC2, which accounts for only 9% of the variance in gene expression, indicating that we expect to see local rather than global differences in expression levels between the two.
 
 4) Following this, a differential gene analysis was run, and a volcano plot was generated to depict the significance, magnitude, and direction of the differences in gene expression levels between the two experimental conditions (lines 107-146). The volcano plot is given below. As illustrated by this figure, the most significantly expressed genes (seen in red) were upregulated in THI- conditions relative to THI+ ones.
-<img width="924" alt="image" src="https://github.com/user-attachments/assets/f6111089-1893-4bce-a6f0-9aa02a169693">
+<img width="734" alt="image" src="https://github.com/user-attachments/assets/70a5b534-a8c0-4d53-bbc5-45d3f03bab78">
+
 
 
 5) Next, the most significant differentially expressed genes were identified by pruning the data based on the parameters of a p-value of < 0.05 and an absolute log2FoldChange of > 1 (line 152). From this, 13 critical differentially expressed genes (DEGs) with positive log2FoldChanges were isolated, reaffirming that these genes are upregulated in the absence of thiamine (lines 148-154). This information is depicted in the table below.
