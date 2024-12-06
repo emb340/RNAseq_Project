@@ -34,7 +34,7 @@ After the creation of these indices, bowtie2 was employed to align the trimmed, 
 
 This read alignment is depicted in the WTA1.sam file, and summarized in the [z01 file](https://github.com/emb340/RNAseq_Project/blob/main/z01.bowtie2) derived from the above bowtie2 script. Overall, the alignment was broadly successful, with a global alignment rate of trimmed reads to the reference transcriptome of 98.07%. Additionally, 95.24% of these reads aligned concordantly at least once. Further analysis of the alignment success for all experimental data can be accessed [here](https://docs.google.com/spreadsheets/d/1fa-FXVMlCXOZkbHSx_mMg0OXLMy9BeBJg8uWrEMpKGo/edit?gid=0#gid=0).
 
-To best facilitate the next step of the workflow, the samtools package was utilized to convert the .sam file containing the alignment data to a .bam file (WTA1.bam) using the following Bash command: samtools view -S -b WTA1.sam > WTA1.bam. Then, an index bam file (WTA1.bam.bai) was also generated utilizing the command "samtools index WTA1.bam." 
+To best facilitate the next step of the workflow, the samtools package was utilized to convert the .sam file containing the alignment data to a .bam file (WTA1.bam) using the following Bash command: samtools view -S -b WTA1.sam > WTA1.bam. Then, an index bam file (WTA1.bam.bai) was also generated utilizing the Bash command "samtools index WTA1.bam." 
 
 
 ## Counting Reads per Gene Model with HTSeq
