@@ -1,5 +1,5 @@
 # Workflow details for the _Candida albicans_ RNAseq analysis 
-The general outline for this project is Sequence Quality Control --> Mapping to a Reference --> Couting the Reads per Gene Model --> Differential Expression Analysis --> Gene Ontology Enrichment Analysis
+The general outline for this project is Sequence Quality Control --> Mapping to a Reference --> Counting the Reads per Gene Model --> Differential Expression Analysis --> Gene Ontology Enrichment Analysis
 
 ## Overview of Experimental Treatment
 _Candida albicans_ is a human commensal fungus and opportunistic pathogen that can cause several diseases, including urinary tract and blood infections. To evaluate its role in _C. albicans_ proliferation, cultures of this species were grown in the presence or absence of thiamine (Vitamin B1) and then their mRNA transcripts were collected and sequenced for evaluation. This experimental procedure gave rise to a collection of 12 data files: forward and reverse reads (_1 and _2) for three biological replicates (WTA, WTB, and WTC) grown in the presence or absence of thiamine (WTX1 or WTX2). 
