@@ -26,7 +26,7 @@ A second iteration of FASTQ analysis illustrated that positive changes in qualit
 
 Mapping was done using the _Candida albicans_ reference genome [(GCF_000182965.3)](https://github.com/emb340/RNAseq_Project/blob/main/GCF_000182965.3_ASM18296v3_genomic.fna) obtained from the NCBI genome database. This haploid assembly was selected to streamline the alignment process and take advantage of NCBI's curated [annotation file](https://github.com/emb340/RNAseq_Project/blob/main/GCF_000182965.3_ASM18296v3_genomic.gtf).
 
-The genome was indexed with bowtie2/2.5.3, creating several new index files with the base name alignment_index based on the NCBI reference genome and using the following command: 
+The genome was indexed with bowtie2/2.5.3, creating several new index files with the base name alignment_index based on the NCBI reference genome and using the following Bash command: 
 
 bowtie2-build /home/emb340/RNAseq/step_three_referenceSeq/GCF_000182965.3_ASM18296v3_genomic.fna alignment_index
 
@@ -34,7 +34,7 @@ After the creation of these indices, bowtie2 was employed to align the trimmed, 
 
 This read alignment is depicted in the WTA1.sam file, and summarized in the [z01 file](https://github.com/emb340/RNAseq_Project/blob/main/z01.bowtie2) derived from the above bowtie2 script. Overall, the alignment was broadly successful, with an overall alignment rate of trimmed reads to the reference transcriptome of 98.07% and 95.24% of these reads aligning concordantly at least once. Further analysis of the alignment success for all experimental data can be accessed [here](https://docs.google.com/spreadsheets/d/1fa-FXVMlCXOZkbHSx_mMg0OXLMy9BeBJg8uWrEMpKGo/edit?gid=0#gid=0).
 
-To best facilitate the next step of the workflow, the samtools package was utilized to convert the .sam file containing the alignment data to a .bam file (WTA1.bam) using the following command: samtools view -S -b WTA1.sam > WTA1.bam. Then, an index bam file (WTA1.bam.bai) was also generated utilizing the command "samtools index WTA1.bam." 
+To best facilitate the next step of the workflow, the samtools package was utilized to convert the .sam file containing the alignment data to a .bam file (WTA1.bam) using the following Bash command: samtools view -S -b WTA1.sam > WTA1.bam. Then, an index bam file (WTA1.bam.bai) was also generated utilizing the command "samtools index WTA1.bam." 
 
 
 ## Counting Reads per Gene Model with HTSeq
@@ -63,7 +63,7 @@ As can be seen in the PCA plot, the two experimental conditions (THI+/THI-) do n
 5) Next, the most significant differentially expressed genes were identified by pruning the data based on the parameters of a p-value of < 0.05 and an absolute log2FoldChange of > 1 (line 152). From this, 13 critical differentially expressed genes (DEGs) with positive log2FoldChanges were isolated, reaffirming that these genes are upregulated in the absence of thiamine (lines 148-154). This information is depicted in the table below.
 <img width="667" alt="image" src="https://github.com/user-attachments/assets/e1e4b73b-c2e4-4d52-97e8-0f41838c01d5">
 
-6) Gene names were then pulled from NCBI and attached to the previously identified DEGs (lines 157-174). The NCBI geneID and Candida Genome Database gene name from the .gtf annotation file--utilized earlier in the analysis when mapping reads to a reference genome--were then collected by the following BASH command: $ grep -wFf signif_geneIDs GCF_000182965.3_ASM18296v3_genomic.gtf|grep "protein_coding"|cut -f9|cut -d ";" -f1,3,5 > signif_gene_annot_info.
+6) Gene names were then pulled from NCBI and attached to the previously identified DEGs (lines 157-174). The NCBI geneID and Candida Genome Database gene name from the .gtf annotation file--utilized earlier in the analysis when mapping reads to a reference genome--were then collected by the following Bash command: $ grep -wFf signif_geneIDs GCF_000182965.3_ASM18296v3_genomic.gtf|grep "protein_coding"|cut -f9|cut -d ";" -f1,3,5 > signif_gene_annot_info.
 
 7) Finally, descriptions of the biological function of these genes were obtained from the [Candida genome page](http://www.candidagenome.org/). The final DEG characterizations, several of which are related to thiamine biosynthesis or transport, can be found in this [sheet](https://github.com/emb340/RNAseq_Project/blob/main/signif_TH-vTH%2B.xlsx).
 
@@ -74,7 +74,7 @@ To identify GO terms that were meaningfully enriched for the previously identifi
 
 
 
-From the above table, it is evident that the genes upregulated in _Candida albicans_ grown in the absence of thiamine are involved in the synthesis of thiamine and its derivatives. This conclusion aligns with the results of the DESeq2 analysis, reaffirming this function for the majority of the 13 identified DEGs. Such a function for these genes makes biological sense, as when _C. albicans_ is cultivated in conditions where it is starved for thiamine, to enable survival and proliferation, the organism would opt to produce its own thiamine rather than fail to obtain it from the extracellular environment. 
+From the above table, it is evident that the genes upregulated in _Candida albicans_ grown in the absence of thiamine are involved in the synthesis of thiamine and its derivatives. This conclusion aligns with the results of the DESeq2 analysis, reaffirming this function for the majority of the 13 identified DEGs. Such a function for these genes makes biological sense, as when _C. albicans_ is cultivated in conditions where it is starved for thiamine, to enable survival and proliferation, the organism would opt to produce its thiamine rather than fail to obtain it from the extracellular environment. 
 
-However, it is important to note that a number of the DEGs possessed functions unrelated to the biosynthesis of thiamine. As inferred from the Candida genome databse and PANTHER evaluation, these include pyridoxine (a derivative of vitamin B6) synthesis and transport, strol synthesis, and chromosomal segregation in mitosis. Speculatively, the differenital expression of genes with these additional functions in _C. albicans_ cultured in a thiamine-absent environment suggests these processes may be involved in a broader stress response to conditions of nutrient limitation.
+However, it is important to note that a number of the DEGs possessed functions unrelated to the biosynthesis of thiamine. As inferred from the Candida genome database and PANTHER evaluation, these include pyridoxine (a derivative of vitamin B6) synthesis and transport, sterol synthesis, and chromosomal segregation in mitosis. Speculatively, the differential expression of genes with these additional functions in _C. albicans_ cultured in a thiamine-absent environment suggests these processes may be involved in a broader stress response to conditions of nutrient limitation.
 
