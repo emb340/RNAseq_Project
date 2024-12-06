@@ -10,7 +10,7 @@ This analysis will specifically investigate the population of biological isolate
 
 ## Data Accession
 RNA sequence data was obtained from the Rolfes Lab at the Georgetown University Department of Biology.
-Raw reads are not accessible to the public currently, as they have yet to be published.
+Raw reads are not accessible to the public, as they have yet to be published.
 
 
 ## Preprocessing and Quality Control
